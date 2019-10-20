@@ -1,0 +1,336 @@
+body{
+  font-size: 2em;
+  margin:0;
+  animation: mianimacion 2.5s;
+}
+
+@keyframes mianimacion {
+  0%{
+    margin-top: 150%;
+  }
+
+  60%{
+    margin-top: -5%;
+  }
+
+  100%{
+    margin-top: 0%;
+  }
+
+}
+
+/*estilos para cabecera en PC escritorio*/
+@media (min-width:768px) {
+  .nav{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:769px) {
+  .nav{
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .menu{
+    justify-content: space-around;
+  }
+}
+
+.nav{
+  background: #5b7989;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  z-index: 10;
+}
+
+.menu{
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  color: #ddd;
+  background: #5b7989;
+  border-radius: 0 10px;
+}
+
+.submenu{
+  display: none;
+  margin-top: 0;
+  position: absolute;
+  top: 100%
+}
+
+.link-menu{
+  text-decoration: none;
+  color: #ddd;
+  display: block;
+  padding:.5em 1em;
+  text-shadow: 2px 2px #02010a;
+}
+
+.item-title{
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #ddd;
+  text-shadow: 2px 2px #02010a;
+}
+
+.item-menu:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.item-menu{
+  position: relative;
+}
+
+.item-menu:hover .submenu{
+  display: block;
+}
+
+/*estilos para seccion principal imagen*/
+
+@media (max-width:768px) {
+  .card-img{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .img{
+    width: 95%;
+  }
+
+  .img-title{
+    width:95%;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:769px) {
+  .card-img{
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  .img{
+    width:80%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .img-title{
+    width:80%;
+    font-size: 2rem;
+  }
+}
+
+.section-uno{
+background-color: #82c3a6;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.card-img{
+  width:95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.img{
+  display: block;
+  box-shadow: 2px 2px 5px 5px black;
+
+}
+
+.img-title{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/*estilos para seccion de dos columnas*/
+
+@media (max-width:768px) {
+  .section-dos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .column{
+    width: 95%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+   }
+
+   .img-column{
+     width: 95%;
+   }
+
+   .column-title{
+     width: 95%;
+     font-size: 1rem;
+   }
+}
+
+@media (min-width:769px) {
+  .section-dos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+   .column{
+     width: 45%;
+     margin-top: 2%;
+     margin-bottom: 2%;
+   }
+
+   .img-column{
+     width: 40vw;
+     height: 40vh;
+   }
+
+   .column-title{
+     width: 40vw;
+     font-size: 1rem;
+   }
+}
+
+.section-dos{
+  background-color:  #d5c75f;
+  border: 1px solid black;
+}
+
+.column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 2s;
+}
+
+.link_paisajes, .link_retratos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-column{
+  display: block;
+  box-shadow: 2px 2px 5px 5px black;
+}
+
+.column-title{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.one:hover {
+  transform: rotate(10deg);
+}
+
+.two:hover  {
+  transform: translate(20px, -5px);
+
+}
+/*Estilos para el footer*/
+
+@media (max-width:768px) {
+  .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: .8rem;
+    text-align: center;
+  }
+
+  .footer-column{
+    width: 95%;
+  }
+
+}
+
+@media (min-width:769px) {
+  .footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+
+  .footer-column{
+    width:20%;
+  }
+}
+
+.footer{
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer-list{
+  list-style: none;
+}
+
+.footer-item{
+  text-align: center;
+}
+
+.redes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redes:nth-child(2)::before{
+  content: '';
+  background: url(https://simply-communicate.com/wp-content/uploads/2019/03/facebook-2661207_960_720.jpg);
+  background-size: contain;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin-right: .25em;
+  border-radius: 50%;
+}
+
+.redes:nth-child(3)::before{
+  content: '';
+  background: url(https://icon-library.net/images/twitter-icon/twitter-icon-18.jpg);
+  background-size: contain;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin-right: .25em;
+  border-radius: 50%;
+}
+
+.redes:nth-child(4)::before{
+  content: '';
+  background: url(https://yt3.ggpht.com/a/AGF-l79anjdKWKGnf45l7z4GikgamFzQnd13Z7KgWw=s900-c-k-c0xffffffff-no-rj-mo);
+  background-size: contain;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin-right: .25em;
+  border-radius: 50%;
+}
